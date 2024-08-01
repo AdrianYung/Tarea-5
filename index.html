@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bachillerato en Computación - Liceo Canadiense Guatemala</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            scroll-behavior: smooth;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        header {
+            background: #2c3e50;
+            color: #fff;
+            padding: 1rem;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            text-align: center;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 1rem;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #1abc9c;
+        }
+
+        main {
+            padding: 6rem 1rem 1rem;
+        }
+
+        section {
+            padding: 3rem 1rem;
+            margin: 1rem auto;
+            max-width: 900px;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        h1, h2, h3 {
+            margin: 0 0 1rem;
+            color: #2c3e50;
+        }
+
+        footer {
+            background: #2c3e50;
+            color: #fff;
+            text-align: center;
+            padding: 1rem;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        .contact-form label {
+            display: block;
+            margin: 0.5rem 0 0.2rem;
+        }
+
+        .contact-form input, .contact-form textarea {
+            width: calc(100% - 1rem);
+            padding: 0.5rem;
+            margin-bottom: 1rem;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+
+        .contact-form button {
+            padding: 0.5rem 1rem;
+            background: #1abc9c;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .contact-form button:hover {
+            background: #16a085;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            transition: transform 0.3s;
+        }
+
+        img:hover {
+            transform: scale(1.05);
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .fade-in {
+            animation: fadeIn 1s ease-out;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+                <li><a href="#productos">Productos y Servicios</a></li>
+                <li><a href="#blog">Blog</a></li>
+                <li><a href="#privacidad">Política de Privacidad</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="inicio">
+            <h1 class="fade-in">Bienvenidos a la Carrera de Bachillerato en Computación</h1>
+            <p class="fade-in">Esta carrera es muy interesante porque aprenderás a programar, armar computadoras, hacer mantenimiento, y manejar plataformas como Excel y productos de Office. El Bachillerato en Ciencias y Letras con Orientación en Computación del Liceo Canadiense se enfoca en formar profesionales en áreas de programación, manejo de bases de datos, y tecnología para alcanzar objetivos comerciales.</p>
+            
+            <h2>Pensum de Estudios</h2>
+            <h3>Grado 4to</h3>
+            <p>Materias: Matemáticas, Lenguaje y Literatura, Ciencias Sociales, Educación Física, Expresión Artística, Filosofía, Contabilidad, Técnico Web, Computación Aplicada, entre otras.</p>
+            <h3>Grado 5to</h3>
+            <p>Materias: Estadística, Ciencias Sociales, Literatura, Comunicación y Lenguaje, Ética, Técnico Web, Práctica Supervisada, Soporte Técnico, entre otras.</p>
+            
+            <h2>Recursos Multimedia</h2>
+            <img class="fade-in" src="https://concepto.de/wp-content/uploads/2014/08/programacion-2-e1551291144973.jpg" alt="Programación">
+            <img class="fade-in" src="https://www.prensalibre.com/wp-content/uploads/2019/09/shutterstock_1486307192.jpg?quality=52&w=1000" alt="Computadoras">
+        </section>
+
+        <section id="contacto">
+            <h2 class="fade-in">Contacto</h2>
+            <form class="contact-form" action="mailto:tuemail@ejemplo.com" method="post" enctype="text/plain">
+                <label for="name">Nombre:</label>
+                <input type="text" id="name" name="name" required>
+                <label for="email">Correo Electrónico:</label>
+                <input type="email" id="email" name="email" required>
+                <label for="message">Mensaje:</label>
+                <textarea id="message" name="message" required></textarea>
+                <button type="submit">Enviar</button>
+            </form>
+        </section>
+
+        <section id="productos">
+            <h2 class="fade-in">Productos y Servicios</h2>
+            <h3>Productos</h3>
+            <p>Office, Adobe, programación, mantenimiento de computadoras.</p>
+            <h3>Servicios</h3>
+            <p>Aprenderás a manejar paquetes básicos de Office como Word, Excel, y programas de Adobe como Photoshop. En programación, manejarás lenguajes como HTML, C++, Python, JavaScript, entre otros. También recibirás formación en mantenimiento y redes.</p>
+        </section>
+
+        <section id="blog">
+            <h2 class="fade-in">Blog</h2>
+            <h3>Últimos Artículos</h3>
+            <article class="fade-in">
+                <h4>Liceo Canadiense: Tu mejor opción</h4>
+                <p>El Liceo Canadiense es una excelente opción para formarte en el campo de la computación, ofreciendo una educación integral y moderna.</p>
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQvqLZGQF10i-S0V2v3gt1JmX-3F5OL-WnRYQ&s" alt="Liceo Canadiense">
+            </article>
+        </section>
+
+        <section id="privacidad">
+            <h2 class="fade-in">Política de Privacidad</h2>
+            <p>Detalles sobre cómo se manejarán los datos personales.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Bachillerato en Computación - Liceo Canadiense Guatemala</p>
+    </footer>
+</body>
+</html>
+
