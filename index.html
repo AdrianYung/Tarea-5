@@ -10,64 +10,103 @@
             margin: 0;
             padding: 0;
             scroll-behavior: smooth;
-            background-color: #f4f4f4;
+            background-color: #f50e0e;
             color: #333;
         }
-
         header {
-            background: #2c3e50;
-            color: #fff;
-            padding: 1rem;
+            background: linear-gradient(90deg, #0a7ff5, #1300b9);
+            color: #ffffff;
+            padding: 1rem 2rem;
             position: fixed;
             width: 100%;
             top: 0;
             z-index: 1000;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
         }
-
         nav ul {
             list-style: none;
             padding: 0;
             margin: 0;
-            text-align: center;
+            display: flex;
         }
-
         nav ul li {
-            display: inline;
             margin: 0 1rem;
         }
-
         nav ul li a {
             color: #fff;
             text-decoration: none;
             font-weight: bold;
             transition: color 0.3s;
+            cursor: pointer;
         }
-
         nav ul li a:hover {
-            color: #1abc9c;
+            color: #2a1abc;
         }
-
+        .hero {
+            background: url('https://www.prensalibre.com/wp-content/uploads/2019/09/shutterstock_1486307192.jpg?quality=52&w=1000') no-repeat center center/cover;
+            color: #fff;
+            text-align: center;
+            padding: 8rem 1rem;
+            margin-top: 4rem;
+            border-radius: 0 0 50% 50% / 0 0 10% 10%;
+        }
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            animation: fadeIn 1.5s ease-out;
+        }
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            animation: fadeIn 2s ease-out;
+        }
+        .hero .btn {
+            padding: 0.7rem 2rem;
+            background: #ff0015;
+            color: #fff;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: background 0.3s, transform 0.3s;
+            animation: fadeIn 2.5s ease-out;
+        }
+        .hero .btn:hover {
+            background: #d80707;
+            transform: scale(1.05);
+        }
+        .info-college {
+            background: #ffffff;
+            padding: 2rem 1rem;
+            margin: 2rem auto;
+            max-width: 900px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        .info-college h2 {
+            color: #2c3e50;
+            margin-bottom: 1rem;
+        }
         main {
-            padding: 6rem 1rem 1rem;
+            padding: 2rem 1rem;
         }
-
         section {
             padding: 3rem 1rem;
-            margin: 1rem auto;
+            margin: 2rem auto;
             max-width: 900px;
             background: #fff;
             border-radius: 8px;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            animation: fadeIn 3s ease-out;
         }
-
-        h1, h2, h3 {
+        h2, h3 {
             margin: 0 0 1rem;
             color: #2c3e50;
         }
-
         footer {
-            background: #2c3e50;
+            background: #e70d0d;
             color: #fff;
             text-align: center;
             padding: 1rem;
@@ -75,12 +114,10 @@
             bottom: 0;
             width: 100%;
         }
-
         .contact-form label {
             display: block;
             margin: 0.5rem 0 0.2rem;
         }
-
         .contact-form input, .contact-form textarea {
             width: calc(100% - 1rem);
             padding: 0.5rem;
@@ -88,73 +125,155 @@
             border: 1px solid #ddd;
             border-radius: 4px;
         }
-
         .contact-form button {
             padding: 0.5rem 1rem;
-            background: #1abc9c;
+            background: #fd0000;
             color: #fff;
             border: none;
             border-radius: 4px;
             cursor: pointer;
             transition: background 0.3s;
         }
-
         .contact-form button:hover {
-            background: #16a085;
+            background: #1204dd;
         }
-
-        img {
-            max-width: 100%;
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            gap: 1rem;
+        }
+        .gallery img {
+            width: calc(33% - 1rem);
             height: auto;
             border-radius: 8px;
-            transition: transform 0.3s;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s, box-shadow 0.3s;
         }
-
-        img:hover {
-            transform: scale(1.05);
+        .gallery img:hover {
+            transform: scale(1.1);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
         }
-
+        .testimonials {
+            background: #053beb;
+            color: #fff;
+            padding: 2rem 1rem;
+            text-align: center;
+            border-radius: 8px;
+            margin: 2rem 0;
+        }
+        .testimonials h2 {
+            margin-bottom: 1rem;
+        }
+        .testimonial {
+            margin-bottom: 1rem;
+        }
+        .testimonial p {
+            font-style: italic;
+        }
+        .testimonial span {
+            display: block;
+            margin-top: 0.5rem;
+            font-weight: bold;
+        }
         @keyframes fadeIn {
             from { opacity: 0; }
             to { opacity: 1; }
         }
-
         .fade-in {
             animation: fadeIn 1s ease-out;
+        }
+        /* Responsive design */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+            .hero p {
+                font-size: 1rem;
+            }
+            .gallery img {
+                width: calc(50% - 1rem);
+            }
+        }
+        @media (max-width: 480px) {
+            .gallery img {
+                width: calc(100% - 1rem);
+            }
+        }
+        .hidden {
+            display: none;
         }
     </style>
 </head>
 <body>
     <header>
+        <div class="logo">
+            <h1>Liceo Canadiense</h1>
+        </div>
         <nav>
             <ul>
-                <li><a href="#inicio">Inicio</a></li>
-                <li><a href="#contacto">Contacto</a></li>
-                <li><a href="#productos">Productos y Servicios</a></li>
-                <li><a href="#blog">Blog</a></li>
-                <li><a href="#privacidad">Política de Privacidad</a></li>
+                <li><a href="#inicio" onclick="showSection('inicio')">Inicio</a></li>
+                <li><a href="#pensum" onclick="showSection('pensum')">Pensum</a></li>
+                <li><a href="#productos" onclick="showSection('productos')">Productos</a></li>
+                <li><a href="#contacto" onclick="showSection('contacto')">Contacto</a></li>
+                <li><a href="#blog" onclick="showSection('blog')">Blog</a></li>
+                <li><a href="#privacidad" onclick="showSection('privacidad')">Política de Privacidad</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
-        <section id="inicio">
-            <h1 class="fade-in">Bienvenidos a la Carrera de Bachillerato en Computación</h1>
-            <p class="fade-in">Esta carrera es muy interesante porque aprenderás a programar, armar computadoras, hacer mantenimiento, y manejar plataformas como Excel y productos de Office. El Bachillerato en Ciencias y Letras con Orientación en Computación del Liceo Canadiense se enfoca en formar profesionales en áreas de programación, manejo de bases de datos, y tecnología para alcanzar objetivos comerciales.</p>
-            
+        <section class="hero" id="inicio">
+            <h1>Bienvenidos a la Carrera de Bachillerato en Computación</h1>
+            <p>Descubre un mundo de oportunidades en el Liceo Canadiense Guatemala.</p>
+            <a href="#contacto" class="btn" onclick="showSection('contacto')">Contáctanos</a>
+        </section>
+
+        <section class="info-college" id="info-colegio">
+            <h2>Sobre el Liceo Canadiense</h2>
+            <p>El Liceo Canadiense Guatemala es una institución educativa de prestigio que ofrece una formación integral y de alta calidad en diversos campos, incluyendo tecnología, ciencias sociales y más. Nuestro enfoque está en preparar a los estudiantes para enfrentar los retos del futuro con conocimientos actualizados y habilidades prácticas.</p>
+            <p>Contamos con un equipo docente altamente capacitado, infraestructura moderna y una variedad de recursos educativos que facilitan un aprendizaje efectivo y dinámico. ¡Estamos comprometidos con tu éxito académico y profesional!</p>
+        </section>
+
+        <section id="pensum" class="hidden">
             <h2>Pensum de Estudios</h2>
             <h3>Grado 4to</h3>
             <p>Materias: Matemáticas, Lenguaje y Literatura, Ciencias Sociales, Educación Física, Expresión Artística, Filosofía, Contabilidad, Técnico Web, Computación Aplicada, entre otras.</p>
             <h3>Grado 5to</h3>
             <p>Materias: Estadística, Ciencias Sociales, Literatura, Comunicación y Lenguaje, Ética, Técnico Web, Práctica Supervisada, Soporte Técnico, entre otras.</p>
-            
-            <h2>Recursos Multimedia</h2>
-            <img class="fade-in" src="https://concepto.de/wp-content/uploads/2014/08/programacion-2-e1551291144973.jpg" alt="Programación">
-            <img class="fade-in" src="https://www.prensalibre.com/wp-content/uploads/2019/09/shutterstock_1486307192.jpg?quality=52&w=1000" alt="Computadoras">
         </section>
 
-        <section id="contacto">
-            <h2 class="fade-in">Contacto</h2>
+        <section>
+            <h2>Recursos Multimedia</h2>
+            <div class="gallery">
+                <img class="fade-in" src="https://concepto.de/wp-content/uploads/2014/08/programacion-2-e1551291144973.jpg" alt="Programación">
+                <img class="fade-in" src="https://scontent.fgua3-5.fna.fbcdn.net/v/t39.30808-6/449850724_888015806704094_8982259165029396790_n.jpg?stp=cp6_dst-jpg&_nc_cat=107&ccb=1-7&_nc_sid=127cfc&_nc_ohc=zKHQACGjpIkQ7kNvgHghSyi&_nc_ht=scontent.fgua3-5.fna&gid=AB4QVxa7c4KEkfzGlQ18JSj&oh=00_AYBC3xThMxpYGjb83W9BzTz1fdFaHj-goIOwPWIzGWuNLg&oe=66B1C681" alt="Computadoras">
+                <img class="fade-in" src="https://scontent.fgua3-5.fna.fbcdn.net/v/t39.30808-6/453407000_902624905243184_5921570962566273966_n.jpg?stp=cp6_dst-jpg&_nc_cat=102&ccb=1-7&_nc_sid=127cfc&_nc_ohc=HOfMq5wlCfsQ7kNvgHDgbLS&_nc_ht=scontent.fgua3-5.fna&gid=AjrmRyKtOMIKHhx2bPnEv_h&oh=00_AYDWWbZLYDB1ZJPWTEDrZ0Rt3eedD1ndoxIjTQ6qCTqcSA&oe=66B1C14C" alt="Redes">
+            </div>
+        </section>
+
+        <section class="testimonials">
+            <h2>Testimonios</h2>
+            <div class="testimonial">
+                <p>"El Bachillerato en Computación del Liceo Canadiense me brindó las herramientas necesarias para destacar en el mundo de la tecnología."</p>
+                <span>- Juan Pérez, Exalumno</span>
+            </div>
+            <div class="testimonial">
+                <p>"La educación que recibí aquí fue integral y moderna, preparada para los desafíos del futuro."</p>
+                <span>- María López, Exalumna</span>
+            </div>
+        </section>
+
+        <section id="productos" class="hidden">
+            <h2>Productos y Servicios</h2>
+            <h3>Productos</h3>
+            <p>Office, Adobe, programación, mantenimiento de computadoras.</p>
+            <h3>Servicios</h3>
+            <p>Aprenderás a manejar paquetes básicos de Office como Word, Excel, y programas de Adobe como Photoshop. En programación, manejarás lenguajes como HTML, C++, Python, JavaScript, entre otros. También recibirás formación en mantenimiento y redes.</p>
+        </section>
+
+        <section id="contacto" class="hidden">
+            <h2>Contacto</h2>
             <form class="contact-form" action="mailto:tuemail@ejemplo.com" method="post" enctype="text/plain">
                 <label for="name">Nombre:</label>
                 <input type="text" id="name" name="name" required>
@@ -166,16 +285,8 @@
             </form>
         </section>
 
-        <section id="productos">
-            <h2 class="fade-in">Productos y Servicios</h2>
-            <h3>Productos</h3>
-            <p>Office, Adobe, programación, mantenimiento de computadoras.</p>
-            <h3>Servicios</h3>
-            <p>Aprenderás a manejar paquetes básicos de Office como Word, Excel, y programas de Adobe como Photoshop. En programación, manejarás lenguajes como HTML, C++, Python, JavaScript, entre otros. También recibirás formación en mantenimiento y redes.</p>
-        </section>
-
-        <section id="blog">
-            <h2 class="fade-in">Blog</h2>
+        <section id="blog" class="hidden">
+            <h2>Blog</h2>
             <h3>Últimos Artículos</h3>
             <article class="fade-in">
                 <h4>Liceo Canadiense: Tu mejor opción</h4>
@@ -184,15 +295,31 @@
             </article>
         </section>
 
-        <section id="privacidad">
-            <h2 class="fade-in">Política de Privacidad</h2>
-            <p>Detalles sobre cómo se manejarán los datos personales.</p>
+        <section id="privacidad" class="hidden">
+            <h2>Política de Privacidad</h2>
+            <p>En el Liceo Canadiense, respetamos tu privacidad y protegemos tus datos personales.</p>
         </section>
     </main>
 
     <footer>
-        <p>&copy; 2024 Bachillerato en Computación - Liceo Canadiense Guatemala</p>
+        <p>&copy; 2024 Liceo Canadiense </p>
     </footer>
+
+    <script>
+        function showSection(id) {
+            document.querySelectorAll('section').forEach(section => {
+                if (section.id === id) {
+                    section.classList.remove('hidden');
+                } else {
+                    section.classList.add('hidden');
+                }
+            });
+        }
+        document.addEventListener('DOMContentLoaded', () => {
+            showSection('inicio');
+        });
+    </script>
 </body>
 </html>
+
 
